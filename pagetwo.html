@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="auto">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="greet.css">
+</head>
+<body>
+    <div class="greeting-container">
+        <h1 id="greeting"></h1>
+        <p>Please select a hero!</p>
+    </div>
+
+    <!-- New container for the image table -->
+    <div class="image-table-container">
+        <table class="image-table">
+            <!-- Add 10x10 images with names (100 images and names in total) -->
+            <tbody>
+                <!-- Row 1 -->
+                <tr>
+                    <td>
+                        <div class="image-item">
+                            <a href="heroes/isaac.html"><img src="https://www.sapaviva.com/wp-content/uploads/2017/06/3S.-Isaac-Newton-1643-–-1727-255x255.jpg" alt="Image 1" class="table-image"></a>
+                            <p class="image-name">Isaac Newton</p>
+                        </div>
+                    <td>
+                        <div class="image-item">
+                            <img src="https://www.sapaviva.com/wp-content/uploads/2017/06/10S.-Gottfried-von-Leibniz-1646-1716-232x232.jpg" alt="Image 2" class="table-image">
+                            <p class="image-name">Gottfried Leibniz</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="image-item">
+                            <img src="https://www.sapaviva.com/wp-content/uploads/2017/06/12S.-Euclid-of-Alexandria-circa-335-265-BC-1-225x225.jpg" alt="Image 3" class="table-image">
+                            <p class="image-name">Euclid of Alexandria</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="image-item">
+                            <img src="https://www.sapaviva.com/wp-content/uploads/2017/06/8S.-Nikola-Tesla-1856-1943-369x369.jpg" alt="Image 4" class="table-image">
+                            <p class="image-name">Nikola Tesla</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="image-item">
+                            <img src="https://www.sapaviva.com/wp-content/uploads/2017/07/26S.-René-Descartes-1596-1650-316x316.jpg" alt="Image 5" class="table-image">
+                            <p class="image-name">René Descartes</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="image-item">
+                            <img src="https://www.sapaviva.com/wp-content/uploads/2017/06/10S.-Albert-Einstein-1879-1955-369x369.jpg" alt="Image 6" class="table-image">
+                            <p class="image-name">Albert Einstein</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="image-item">
+                            <img src="https://www.sapaviva.com/wp-content/uploads/2017/06/7S.-Galileo-Galilei-1564-1642-369x369.jpg" alt="Image 7" class="table-image">
+                            <p class="image-name">Galileo Galilei</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="image-item">
+                            <img src="https://www.sapaviva.com/wp-content/uploads/2017/06/9S.-Marie-Curie-1867-1934-1-1918x1918.jpg" alt="Image 8" class="table-image">
+                            <p class="image-name">Marie Curie</p>
+                        </div>
+                    </td>
+                   
+                </tr>
+                <!-- Additional rows go here for a total of 10 rows -->
+                <!-- <tr>
+                    <td>
+                        <div class="image-item">
+                            <img src="image11.jpg" alt="Image 11" class="table-image">
+                            <p class="image-name">Name 11</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="image-item">
+                            <img src="image12.jpg" alt="Image 12" class="table-image">
+                            <p class="image-name">Name 12</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="image-item">
+                            <img src="image13.jpg" alt="Image 13" class="table-image">
+                            <p class="image-name">Name 13</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="image-item">
+                            <img src="image14.jpg" alt="Image 14" class="table-image">
+                            <p class="image-name">Name 14</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="image-item">
+                            <img src="image15.jpg" alt="Image 15" class="table-image">
+                            <p class="image-name">Name 15</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="image-item">
+                            <img src="image16.jpg" alt="Image 16" class="table-image">
+                            <p class="image-name">Name 16</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="image-item">
+                            <img src="image17.jpg" alt="Image 17" class="table-image">
+                            <p class="image-name">Name 17</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="image-item">
+                            <img src="image18.jpg" alt="Image 18" class="table-image">
+                            <p class="image-name">Name 18</p>
+                        </div>
+                    </td> -->
+                </tr>
+                <!-- Repeat for all 10 rows, you will have 100 images -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Extract the name from the URL query string
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name');
+
+        // Display a personalized greeting if a name exists, otherwise a default greeting
+        const greetingText = name ? "Hello, " + name + "!" : "Hello, Guest!";
+
+        // Typewriter effect function
+        function typeWriter(text, elementId, speed) {
+            let i = 0;
+            const element = document.getElementById(elementId);
+            function type() {
+                if (i < text.length) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+
+        // Trigger the typewriter effect on the greeting
+        typeWriter(greetingText, "greeting", 100); // 100ms speed between characters
+    </script>
+</body>
+</html>

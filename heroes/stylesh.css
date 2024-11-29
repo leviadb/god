@@ -1,0 +1,112 @@
+/* General reset for padding and margins */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body background and text color */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2b3e27; /* Dark green background */
+    color: #e1e1e1; /* Light text for contrast */
+    font-family: monospace;
+}
+
+/* Layout of the hero container */
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #1d2a19; /* Darker green for container */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Hero info styling */
+.hero-info {
+    flex: 1;
+    margin-right: 30px;
+    color: #f1f1f1;
+}
+
+.hero-info h1 {
+    font-size: 2.5rem;
+    color: #a7c057; /* Light green text for hero name */
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.hero-description {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #b6b6b6;
+    line-height: 1.6;
+}
+
+.hero-attributes, .hero-skills {
+    margin-top: 20px;
+}
+
+.hero-attributes h2, .hero-skills h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: #a7c057; /* Light green */
+    text-decoration: underline;
+}
+
+.hero-attributes ul, .hero-skills ul {
+    list-style-type: none;
+}
+
+.hero-attributes li, .hero-skills li {
+    font-size: 1.2rem;
+    color: #e1e1e1;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #4a5d3b; /* Subtle separator line */
+    padding-bottom: 5px;
+}
+
+/* Highlighted text in the lists */
+.hero-attributes li strong, .hero-skills li strong {
+    color: #91b77f; /* Slightly brighter green for key terms */
+}
+
+/* Hero image styling */
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+/* Hover effects for elements */
+.hero-info h1:hover {
+    color: #91b77f;
+    cursor: pointer;
+}
+
+.hero-attributes li:hover, .hero-skills li:hover {
+    background-color: #3a4e31;
+    transition: background-color 0.3s ease;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-info {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .hero-image img {
+        max-width: 80%;
+    }
+}

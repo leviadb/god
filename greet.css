@@ -1,0 +1,100 @@
+/* General styles */
+body {
+    background-color: #092804; /* Dark green background */
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+    color: white;
+    flex-direction: column;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Greeting container */
+.greeting-container {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for glass effect */
+    border-radius: 20px;
+    padding: 10px 5%;
+    text-align: center;
+    backdrop-filter: blur(10px); /* Glass effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    width: 80%;
+    margin-bottom: 100px; /* Maintain bottom margin for spacing */
+}
+
+/* Typewriter effect for the greeting */
+#greeting {
+    font-size: 3em;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 5px solid #fff; /* Cursor effect */
+    display: inline-block;
+}
+
+/* Simple paragraph style */
+.greeting-container p {
+    font-size: 1.4em;
+    color: #f5f5f5;
+    font-weight: 300;
+    margin-top: 10px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Container for the image table */
+.image-table-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Styling for the image table */
+.image-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Styling for each table cell */
+.image-table td {
+    padding: 5px;
+    text-align: center;
+}
+
+/* Styling for the images inside the table */
+.table-image {
+    width: 140px; /* Fixed width */
+    height: 140px; /* Fixed height */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for images */
+.table-image:hover {
+    transform: scale(1.1);
+}
+
+/* Optional: Make the table responsive for smaller screens */
+@media (max-width: 768px) {
+    .table-image {
+        width: 80px; /* Resize images for smaller screens */
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .table-image {
+        width: 60px; /* Further reduce size on very small screens */
+        height: 60px;
+    }
+}
